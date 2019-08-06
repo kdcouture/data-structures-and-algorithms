@@ -3,7 +3,9 @@ public class ArrayReverse {
   public static void main(String[] args) {
     System.out.println("We are about to reverse an array!");
     int[] inArr = new int[]{1,2,3,4,5,6,7};
+    int[] inArr2 = new int[]{1,3,5,7};
     reverseArray(inArr);
+    reverseArray(inArr2);
   }
 
   public static int[] reverseArray(int[] inArr) {
