@@ -2,12 +2,15 @@ import java.util.Arrays;
 public class ArrayReverse {
   public static void main(String[] args) {
     System.out.println("We are about to reverse an array!");
-    int[] inArr = new int[]{1,2,3,4,5,6,7};
-    int[] inArr2 = new int[]{1,3,5,7};
+    int[] inArr = new int[]{1,2,3,4,5,6,7}; // Even length
+    int[] inArr2 = new int[]{1,3,5,7}; // Odd length
     reverseArray(inArr);
     reverseArray(inArr2);
   }
 
+  /*
+  This function reverses an integer array.
+  */
   public static int[] reverseArray(int[] inArr) {
     System.out.println("The input array is: " + Arrays.toString(inArr));
     int temp;
