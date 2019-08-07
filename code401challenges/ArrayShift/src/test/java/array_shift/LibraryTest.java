@@ -3,6 +3,7 @@
  */
 package array_shift;
 
+import org.hamcrest.core.IsNot;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -15,5 +16,13 @@ public class LibraryTest {
     }
     @Test public void testEmptyArray() {
         assertArrayEquals(new int[]{5}, Library.array_shift(new int[]{}, 5));
+    }
+    @Test public void testForFailure() {
+        try{
+            assertArrayEquals(new int[]{1,2,3,4}, Library.array_shift(new int[]{1,2,3,4}, 5));
+        }
+        catch(AssertionError e) {
+            System.err.println("Expected failure: " + e);
+        }
     }
 }
