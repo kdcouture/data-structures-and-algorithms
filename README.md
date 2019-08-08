@@ -1,6 +1,19 @@
 # data-structures-and-algorithms
 # 401 Code Challenges
 <!-- -->
+# [Binary Search](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/code401challenges/BinarySearch)
+<!-- Short summary or background information -->
+Apply the Binary Search algorithim to an ingeter array.
+### Challenge
+<!-- Description of the challenge -->
+Binary search in a sorted 1D array.
+### Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Using the provided [resources](https://en.wikipedia.org/wiki/Binary_search_algorithm), we were able to able to re create the binary search algorithim. Time: O(log n) Space: O(1)
+### Solution
+<!-- Embedded whiteboard image -->
+![Whiteboard image](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/401cc3.jpg)
+<!-- -->
 # [Insert and Shift an Array](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/code401challenges/ArrayReverse)
 <!-- Short summary or background information -->
 Insert an integer into an array at the middle then shift all other elements down one.
