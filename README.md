@@ -14,7 +14,7 @@ Create an implementation of the Linked List data structure.
  includes           O(n)                  O(1)  
 ## API
 <!-- Description of each method publicly available to your Linked List -->
-LinkedList
+LinkedList  
 add(T toAdd) -- This method takes in an object to add into the front of the linked list.  
 includes(T toFind) -- This method takes in an object to look for in the linked list. returns true if found, false otherwise.  
 toString() -- This method returns a string built from the linked list data.  
