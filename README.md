@@ -1,4 +1,23 @@
 # data-structures-and-algorithms
+# 401 Data Structures
+# [Linked List](https://github.com/kdcouture/data-structures-and-algorithms/tree/linked_list/Data-Structures/LinkedList/src/main/java/LinkedList)
+<!-- Short summary or background information -->
+
+## Challenge
+<!-- Description of the challenge -->
+Create an implementation of the Linked List data structure.
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+ Method             Time                  Space  
+ Constructor        O(1)                  O(1)  
+ add                O(1)                  O(1)  
+ includes           O(n)                  O(1)  
+## API
+<!-- Description of each method publicly available to your Linked List -->
+LinkedList
+add(T toAdd) -- This method takes in an object to add into the front of the linked list.
+includes(T toFind) -- This method takes in an object to look for in the linked list. returns true if found, false otherwise.
+toString() -- This method returns a string built from the linked list data.
 # 401 Code Challenges
 <!-- -->
 # [Binary Search](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/code401challenges/BinarySearch)
