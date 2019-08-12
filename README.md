@@ -15,9 +15,9 @@ Create an implementation of the Linked List data structure.
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 LinkedList
-add(T toAdd) -- This method takes in an object to add into the front of the linked list.
-includes(T toFind) -- This method takes in an object to look for in the linked list. returns true if found, false otherwise.
-toString() -- This method returns a string built from the linked list data.
+add(T toAdd) -- This method takes in an object to add into the front of the linked list.  
+includes(T toFind) -- This method takes in an object to look for in the linked list. returns true if found, false otherwise.  
+toString() -- This method returns a string built from the linked list data.  
 # 401 Code Challenges
 <!-- -->
 # [Binary Search](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/code401challenges/BinarySearch)
