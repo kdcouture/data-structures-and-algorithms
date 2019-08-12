@@ -43,6 +43,6 @@ public class LibraryTest {
         testList.insert(3);
         testList.insert(2);
         testList.insert(1);
-        assertEquals("Expected '1 2 3 '", "1 2 3 ", testList.toString());
+        assertEquals("Expected '1 2 3'", "1 2 3", testList.toString());
     }
 }

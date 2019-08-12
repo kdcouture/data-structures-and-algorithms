@@ -33,11 +33,11 @@ class LinkedList<T> {
             return "Empty Linked List";
         }
         LinkedListNode<T> cur = this.head;
-        while(cur != null) {
+        while(cur.next != null) {
             strBuild += (cur.value + " ");
             cur = cur.next;
         }
-        System.out.println();
+        strBuild += cur.value;
         return strBuild;
     }
 
