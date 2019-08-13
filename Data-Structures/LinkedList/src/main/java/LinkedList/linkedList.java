@@ -12,6 +12,64 @@ class LinkedList<T> {
         this.head = null;
     }
 
+    // Methods
+
+    public void append(T toAppend) {
+        LinkedListNode cur = this.head;
+        if(cur == null) {
+            this.insert(toAppend);
+            return;
+        }
+        while(cur.next != null) {
+            cur = cur.next;
+        }
+        cur.next = new LinkedListNode(toAppend, null);
+    }
+
+    public void insertAfter(T toFind, T value) throws Exception {
+        LinkedListNode cur;
+        cur = this.head;
+        while (cur != null) {
+            if(cur.value.equals(toFind)) {
+                // create and attach cur.next
+                LinkedListNode newNode = new LinkedListNode(value, cur.next);
+                // attach newNode after current.
+                cur.next = newNode;
+                return;
+            }
+            else {
+                cur = cur.next;
+            }
+        }
+        throw new Exception("Value not found");
+    }
+
+    public void insertBefore(T toFind, T value) throws Exception {
+        LinkedListNode pre, cur;
+        if(this.head.value.equals(toFind)){
+            this.insert(value);
+            return;
+        }
+        else {
+            pre = this.head;
+            cur = this.head;
+            while (cur != null) {
+                if(cur.value.equals(toFind)) {
+                    // Create and set newNode's next to current
+                    LinkedListNode newNode = new LinkedListNode(value, cur);
+                    // set old prior to point to new node
+                    pre.next = newNode;
+                    return;
+                }
+                else {
+                    pre = cur;
+                    cur = cur.next;
+                }
+            }
+        }
+        throw new Exception("Value not found");
+    }
+
     public void insert(T value) {
         this.head = new LinkedListNode(value, this.head);
     }
@@ -32,12 +90,12 @@ class LinkedList<T> {
         if(this.head == null) {
             return "Empty Linked List";
         }
-        LinkedListNode<T> cur = this.head;
+        LinkedListNode cur = this.head;
         while(cur.next != null) {
-            strBuild += (cur.value + " ");
+            strBuild += (cur.value.toString() + " ");
             cur = cur.next;
         }
-        strBuild += cur.value;
+        strBuild += cur.value.toString();
         return strBuild;
     }
 
@@ -46,7 +104,7 @@ class LinkedList<T> {
 class LinkedListNode<T>{
     // Data
     T value;
-    LinkedListNode<T> next;
+    LinkedListNode next;
 
     // Constructor
     public LinkedListNode(T value, LinkedListNode next) {
@@ -62,7 +120,7 @@ class LinkedListNode<T>{
         return false;
     }
     // For Testing
-    public boolean compareNodeValues(LinkedListNode<T> compTo) {
+    public boolean compareNodeValues(LinkedListNode compTo) {
         if(this.value.equals(compTo.value)) {
             return true;
         }
