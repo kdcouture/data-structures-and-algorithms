@@ -12,12 +12,18 @@ Create an implementation of the Linked List data structure.
  Constructor        O(1)                  O(1)  
  add                O(1)                  O(1)  
  includes           O(n)                  O(1)  
+ append             O(n)                  O(1)  
+ insertBefore       O(n)                  O(1)  
+ insertAfter        O(n)                  O(1)  
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 LinkedList  
 add(T toAdd) -- This method takes in an object to add into the front of the linked list.  
 includes(T toFind) -- This method takes in an object to look for in the linked list. returns true if found, false otherwise.  
 toString() -- This method returns a string built from the linked list data.  
+append(T toAppend) -- This method appends the given value to the end of the linked list.  
+insertBefore(T toFind, T toAdd) -- This method will search for a given value toFind and will place the new value toAdd infront of the element found. Throws execption if not found.  
+insertAfter(T toFind, T toAdd) -- This method will search for given value toFind and will place a new node with value toAdd after it. Throws execption if not found.  
 # 401 Code Challenges
 <!-- -->
 # [Binary Search](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/code401challenges/BinarySearch)
