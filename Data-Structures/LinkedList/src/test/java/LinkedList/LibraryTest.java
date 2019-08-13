@@ -45,4 +45,93 @@ public class LibraryTest {
         testList.insert(1);
         assertEquals("Expected '1 2 3'", "1 2 3", testList.toString());
     }
+
+    @Test public void testAppend() {
+        LinkedList<Integer> testList = new LinkedList();
+        testList.append(2);
+        testList.append(3);
+        testList.insert(1);
+        testList.append(4);
+        assertEquals("Expected '1 2 3 4'", "1 2 3 4", testList.toString());
+    }
+
+    @Test public void testInsertBefore() {
+        LinkedList<Integer> testList = new LinkedList();
+        testList.insert(3);
+        testList.insert(2);
+        testList.insert(1);
+        try{
+            // Insert before the head.
+            testList.insertBefore(1, 9);
+            assertEquals("Expected '9 1 2 3'", "9 1 2 3", testList.toString());
+            // Insert in the list.
+            testList.insertBefore(1, 8);
+            assertEquals("Expected '9 8 1 2 3'", "9 8 1 2 3", testList.toString());
+            // Insert at the end of the list.
+            testList.insertBefore(3, 7);
+            assertEquals("Expected '9 8 1 2 7 3'", "9 8 1 2 7 3", testList.toString());
+        }
+        catch(Exception e) {
+            System.err.println(e);
+        }
+    }
+
+    @Test public void testInsertAfter() {
+        LinkedList<String> testList = new LinkedList();
+        testList.insert("test 3");
+        testList.insert("test 2");
+        testList.insert("test 1");
+
+        LinkedList<Integer> testIntList = new LinkedList();
+        testIntList.insert(3);
+        testIntList.insert(2);
+        testIntList.insert(1);
+        try{
+            // Test insert with strings.
+            testList.insertAfter("test 2", "test 9");
+            assertEquals("Expected 'test 1 test 2 test 9 test 3'", "test 1 test 2 test 9 test 3", testList.toString());
+
+            // Test insert After head.
+            testIntList.insertAfter(1,9);
+            assertEquals("Expected '1 9 2 3'", "1 9 2 3", testIntList.toString());
+            // Test insert After middle
+            testIntList.insertAfter(2,8);
+            assertEquals("Expected '1 9 2 8 3'", "1 9 2 8 3", testIntList.toString());
+            // Test after tail
+            testIntList.insertAfter(3,7);
+            assertEquals("Expected '1 9 2 8 3 7'", "1 9 2 8 3 7", testIntList.toString());
+        }
+        catch (Exception e) {
+            System.err.println(e);
+        }
+        assertEquals("Expected 'test 1 test 2 test 9 test 3'", "test 1 test 2 test 9 test 3", testList.toString());
+    }
+
+    @Test(expected = AssertionError.class) public void testInsertAfterThrow() {
+        LinkedList<String> testList = new LinkedList();
+        testList.insert("test 3");
+        testList.insert("test 2");
+        testList.insert("test 1");
+        try{
+            testList.insertAfter(" Not included", "test 9");
+            fail();
+        }
+        catch (Exception e) {
+            assertTrue("Should not be found and exception should be thrown.",e.equals("Value not found"));
+        }
+    }
+
+    @Test(expected = AssertionError.class) public void testInsertBeforeThrow() {
+        LinkedList<String> testList = new LinkedList();
+        testList.insert("test 3");
+        testList.insert("test 2");
+        testList.insert("test 1");
+        try{
+            testList.insertBefore("Not included", "test 9");
+            fail();
+        }
+        catch (Exception e) {
+            assertTrue("Should not be found and exception should be thrown.",e.equals("Value not found"));
+        }
+    }
 }
