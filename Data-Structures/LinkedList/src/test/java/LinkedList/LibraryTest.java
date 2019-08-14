@@ -137,14 +137,14 @@ public class LibraryTest {
 
     @Test public void testKthFromEndSafe(){
         LinkedList<Integer> testIntList = new LinkedList();
+        testIntList.insert(6);
         testIntList.insert(5);
         testIntList.insert(4);
-        testIntList.insert(6);
         testIntList.insert(3);
         testIntList.insert(2);
         testIntList.insert(1);
         try{
-            assertEquals("Should be 2", (Integer)3, testIntList.kthFromEnd(2));
+            assertEquals("Should be 5", (Integer)5, testIntList.kthFromEnd(1));
         }
         catch (Exception e) {
             fail();
@@ -157,7 +157,7 @@ public class LibraryTest {
         testIntList.insert(2);
         testIntList.insert(1);
         try{
-            assertEquals("Should be 3", (Integer)3, testIntList.kthFromEnd(2));
+            assertEquals("Should be 1", (Integer)1, testIntList.kthFromEnd(2));
         }
         catch (Exception e) {
             fail();
@@ -170,7 +170,7 @@ public class LibraryTest {
         testIntList.insert(2);
         testIntList.insert(1);
         try{
-            assertEquals("Should be 3", (Integer)3, testIntList.kthFromEnd(8));
+            assertEquals("Should Throw", (Integer)3, testIntList.kthFromEnd(8));
             fail();
         }
         catch (Exception e) {
@@ -184,7 +184,7 @@ public class LibraryTest {
         testIntList.insert(2);
         testIntList.insert(1);
         try{
-            assertEquals("Should be 3", (Integer)3, testIntList.kthFromEnd(-1));
+            assertEquals("Should Throw", (Integer)3, testIntList.kthFromEnd(-1));
             fail();
         }
         catch (Exception e) {
