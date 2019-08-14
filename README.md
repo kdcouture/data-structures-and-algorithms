@@ -27,9 +27,9 @@ insertBefore(T toFind, T toAdd) -- This method will search for a given value toF
 insertAfter(T toFind, T toAdd) -- This method will search for given value toFind and will place a new node with value toAdd after it. Throws execption if not found.  
 kthFromEnd(int k) -- This method will find the kth element from the end.
 ### Whiteboarding
-Lab7  
+Code Challenge 7  
 ![Whiteboard image](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/cc7.jpg)
-Lab 6
+Code Challenge 6
 ![Whiteboard image](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/cc6WhiteBoard.jpg)
 # 401 Code Challenges
 <!-- -->
