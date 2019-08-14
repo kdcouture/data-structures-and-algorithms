@@ -6,10 +6,12 @@ package LinkedList;
 class LinkedList<T> {
     // Data
     LinkedListNode head;
+//    int size;
 
     // Constructor
     public LinkedList() {
         this.head = null;
+//        this.size = 0;
     }
 
     // Methods
@@ -23,6 +25,7 @@ class LinkedList<T> {
         while(cur.next != null) {
             cur = cur.next;
         }
+//        this.size++;
         cur.next = new LinkedListNode(toAppend, null);
     }
 
@@ -35,6 +38,7 @@ class LinkedList<T> {
                 LinkedListNode newNode = new LinkedListNode(value, cur.next);
                 // attach newNode after current.
                 cur.next = newNode;
+//                this.size++;
                 return;
             }
             else {
@@ -59,6 +63,7 @@ class LinkedList<T> {
                     LinkedListNode newNode = new LinkedListNode(value, cur);
                     // set old prior to point to new node
                     pre.next = newNode;
+//                    this.size++;
                     return;
                 }
                 else {
@@ -72,6 +77,7 @@ class LinkedList<T> {
 
     public void insert(T value) {
         this.head = new LinkedListNode(value, this.head);
+//        this.size++;
     }
 
     public boolean includes(T target) {
@@ -83,6 +89,29 @@ class LinkedList<T> {
             cur = cur.next;
         }
         return false;
+    }
+
+    public T kthFromEnd(int k) throws Exception {
+        int length = this.length(this.head) - 1;
+        if(k > length) {
+            throw new Exception("k is invalid.");
+        }
+        LinkedListNode<T> cur = this.head;
+        for(int i = 1; i <= k; i++) {
+            cur = cur.next;
+        }
+        return cur.value;
+    }
+
+    public int length(LinkedListNode current) {
+        // Base case current = null
+        if(current == null) {
+            return 1;
+        }
+        // Recursively crawl through list.
+        else {
+            return this.length(current.next)+1;
+        }
     }
 
     public String toString() {
@@ -106,7 +135,11 @@ class LinkedListNode<T>{
     T value;
     LinkedListNode next;
 
-    // Constructor
+    // Constructors
+    public LinkedListNode(){
+        this.value = null;
+        this.next = null;
+    }
     public LinkedListNode(T value, LinkedListNode next) {
         this.value = value;
         this.next = next;
