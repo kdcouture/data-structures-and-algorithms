@@ -25,7 +25,7 @@ toString() -- This method returns a string built from the linked list data.
 append(T toAppend) -- This method appends the given value to the end of the linked list.  
 insertBefore(T toFind, T toAdd) -- This method will search for a given value toFind and will place the new value toAdd infront of the element found. Throws execption if not found.  
 insertAfter(T toFind, T toAdd) -- This method will search for given value toFind and will place a new node with value toAdd after it. Throws execption if not found.  
-kthFromEnd(int k) -- This method will find the kth element from the end.
+kthFromEnd(int k) -- This method will find the kth element from the end. (last element is considered 0th from the end)
 ### Whiteboarding
 Code Challenge 7  
 ![Whiteboard image](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/cc7.jpg)
