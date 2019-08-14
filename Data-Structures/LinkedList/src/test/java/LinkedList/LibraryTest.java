@@ -134,4 +134,74 @@ public class LibraryTest {
             assertTrue("Should not be found and exception should be thrown.",e.equals("Value not found"));
         }
     }
+
+    @Test public void testKthFromEndSafe(){
+        LinkedList<Integer> testIntList = new LinkedList();
+        testIntList.insert(5);
+        testIntList.insert(4);
+        testIntList.insert(6);
+        testIntList.insert(3);
+        testIntList.insert(2);
+        testIntList.insert(1);
+        try{
+            assertEquals("Should be 2", (Integer)3, testIntList.kthFromEnd(2));
+        }
+        catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test public void testKthFromEndEdgeKIsLength(){
+        LinkedList<Integer> testIntList = new LinkedList();
+        testIntList.insert(3);
+        testIntList.insert(2);
+        testIntList.insert(1);
+        try{
+            assertEquals("Should be 3", (Integer)3, testIntList.kthFromEnd(2));
+        }
+        catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test(expected = AssertionError.class) public void testKthFromEndKTooBig(){
+        LinkedList<Integer> testIntList = new LinkedList();
+        testIntList.insert(3);
+        testIntList.insert(2);
+        testIntList.insert(1);
+        try{
+            assertEquals("Should be 3", (Integer)3, testIntList.kthFromEnd(8));
+            fail();
+        }
+        catch (Exception e) {
+            assertTrue("k is larger than our size.", e.equals("k is invalid."));
+        }
+    }
+
+    @Test(expected = AssertionError.class) public void testKthFromEndKNegative(){
+        LinkedList<Integer> testIntList = new LinkedList();
+        testIntList.insert(3);
+        testIntList.insert(2);
+        testIntList.insert(1);
+        try{
+            assertEquals("Should be 3", (Integer)3, testIntList.kthFromEnd(-1));
+            fail();
+        }
+        catch (Exception e) {
+            assertTrue("k is negative.", e.equals("k is invalid."));
+        }
+    }
+
+    @Test public void testKthFromEnd1Element(){
+        LinkedList<Integer> testIntList = new LinkedList();
+        testIntList.insert(3);
+        try{
+            testIntList.kthFromEnd(0);
+            assertEquals("Should be 3", (Integer)3, testIntList.kthFromEnd(0));
+        }
+        catch (Exception e) {
+            fail();
+        }
+    }
+
 }
