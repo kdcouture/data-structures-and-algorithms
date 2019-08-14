@@ -97,7 +97,7 @@ class LinkedList<T> {
             throw new Exception("k is invalid.");
         }
         LinkedListNode<T> cur = this.head;
-        for(int i = 1; i <= k; i++) {
+        for(int i = 1; i < (length - k); i++) {
             cur = cur.next;
         }
         return cur.value;
