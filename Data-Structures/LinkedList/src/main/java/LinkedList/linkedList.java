@@ -114,6 +114,52 @@ class LinkedList<T> {
         }
     }
 
+    public static LinkedList merge(LinkedList l1, LinkedList l2) {
+        if(l1.head == null) {
+            return l2;
+        }
+        else if (l2.head == null) {
+            return l1;
+        }
+        LinkedListNode l1Cur =l1.head.next; // Tracks l1
+        LinkedListNode l2Cur = l2.head; // Tracks l2
+        LinkedList<LinkedListNode> mergedList = new LinkedList<LinkedListNode>();
+        mergedList.head = l1.head;
+        LinkedListNode mCur = mergedList.head; // Tracks merged list
+        while(l1Cur != null && l2Cur != null){
+            // Link L2 Node
+            mCur.next = l2Cur;
+            // Move merged tracker
+            mCur= mCur.next;
+            // Move l2 tracker
+            l2Cur = l2Cur.next;
+
+            // Link l1 Node
+            mCur.next = l1Cur;
+            // Move l1 tacker forward
+            l1Cur = l1Cur.next;
+            // Move merged tracker
+            mCur = mCur.next;
+        }
+        while(l1Cur != null) {
+            // Link l1 Node
+            mCur.next = l1Cur;
+            // Move l1 tacker forward
+            l1Cur = l1Cur.next;
+            // Move merged tracker
+            mCur = mCur.next;
+        }
+        while(l2Cur != null) {
+            // Link l2 Node
+            mCur.next = l2Cur;
+            // Move l2 tacker forward
+            l2Cur = l2Cur.next;
+            // Move merged tracker
+            mCur = mCur.next;
+        }
+        return mergedList;
+    }
+
     public String toString() {
         String strBuild = "";
         if(this.head == null) {
