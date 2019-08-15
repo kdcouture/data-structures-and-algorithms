@@ -204,4 +204,70 @@ public class LibraryTest {
         }
     }
 
+    @Test public void testMergListsSafe() {
+        LinkedList<Integer> l1 = new LinkedList();
+        LinkedList<Integer> l2 = new LinkedList();
+        l1.insert(3); // end of l1
+        l1.insert(2);
+        l1.insert(1); // head of l1
+
+        l2.insert(6); // end of l2
+        l2.insert(5);
+        l2.insert(4); // head of l2
+
+        LinkedList<Integer> merged1 = LinkedList.merge(l1,l2);
+        assertEquals("1 4 2 5 3 6", "1 4 2 5 3 6", merged1.toString());
+    }
+
+    @Test public void testMergListsL2Longer() {
+        LinkedList<Integer> l1 = new LinkedList();
+        LinkedList<Integer> l2 = new LinkedList();
+        l1.insert(4); // end of l1
+        l1.insert(4);
+        l1.insert(4); // head of l1
+
+        l2.insert(7); // end of l2
+        l2.insert(7);
+        l2.insert(7);
+        l2.insert(7);
+        l2.insert(7);
+        l2.insert(7); // head of l2
+
+        LinkedList<Integer> merged1 = LinkedList.merge(l1,l2);
+        assertEquals("4 7 4 7 4 7 7 7 7", "4 7 4 7 4 7 7 7 7", merged1.toString());
+    }
+
+    @Test public void testMergListsL1Longer() {
+        LinkedList<Integer> l1 = new LinkedList();
+        LinkedList<Integer> l2 = new LinkedList();
+        l1.insert(4); // end of l1
+        l1.insert(4);
+        l1.insert(4);
+        l1.insert(4);
+        l1.insert(4);
+        l1.insert(4); // head of l1
+
+        l2.insert(7); // end of l2
+        l2.insert(7);
+        l2.insert(7); // head of l2
+
+        LinkedList<Integer> merged1 = LinkedList.merge(l1,l2);
+        assertEquals("4 7 4 7 4 7 4 4 4", "4 7 4 7 4 7 4 4 4", merged1.toString());
+    }
+
+    @Test public void testEmptyLists() {
+        LinkedList<Integer> l1 = new LinkedList();
+        LinkedList<Integer> l2 = new LinkedList();
+        LinkedList<Integer> merged1 = LinkedList.merge(l1,l2);
+        assertEquals("Empty Linked List", "Empty Linked List", merged1.toString());
+        l2.insert(7); // end of l2
+        l2.insert(7);
+        l2.insert(7); // head of l2
+        merged1 = LinkedList.merge(l1,l2);
+        assertEquals("7 7 7", "7 7 7", merged1.toString());
+
+        merged1 = LinkedList.merge(l2,l1);
+        assertEquals("7 7 7", "7 7 7", merged1.toString());
+
+    }
 }
