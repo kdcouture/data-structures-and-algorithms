@@ -21,12 +21,12 @@ Dequeue() O(1)    O(1)
 ### Stack
 Stack() - Creates an empty stack.  
 Peek() - Looks at the top element.  
-Push() - Inserts an element on the top of the stack.  
+Push(T data) - Inserts an element on the top of the stack.  
 Pop() - Removes the element on top of the stack.
 ### Queue
 Queue() - Creates an empty queue.  
 Peek() - Looks at the top element.  
-Enqueue() - Inserts an element in the back of the queue.  
+Enqueue(T data) - Inserts an element in the back of the queue.  
 Dequeue() - Removes the element in the front of queue.  
 
 ---
