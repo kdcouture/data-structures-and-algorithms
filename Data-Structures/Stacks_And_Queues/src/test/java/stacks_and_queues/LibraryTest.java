@@ -89,6 +89,21 @@ public class LibraryTest {
     }
 
     @Test(expected = NullPointerException.class) public void testQueueDequeueEmpty() {
+        qTest.enqueue(1);
+        qTest.enqueue(2);
+        qTest.enqueue(3);
+        qTest.enqueue(4);
+        qTest.dequeue();
+        qTest.dequeue();
+        qTest.dequeue();
+        qTest.dequeue();
+        assertNull("null", qTest.front);
+        assertNull("null", qTest.back);
+        // Should throw error, but it is expected and does not fail.
+        qTest.dequeue();
+    }
+
+    @Test(expected = NullPointerException.class) public void testQueueDequeueToEmpty() {
         // Should throw error, but it is expected and does not fail.
         qTest.dequeue();
     }
