@@ -1,8 +1,43 @@
 # data-structures-and-algorithms
 # 401 Data Structures
+# [Stacks and Queues](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Stacks_And_Queues/src/main/java/stacks_and_queues)
+## Challenge
+Create an implementation of a Stack and a Queue using a linked list like structure.
+## Approach & Efficiency
+Method    Time    Space
+### Stack
+Peek()    O(1)    O(1)  
+Push()    O(1)    O(1)  
+Pop()     O(1)    O(1)  
+
+---
+### Queue
+Peek()    O(1)    O(1)  
+Enqueue() O(1)    O(1)  
+Dequeue() O(1)    O(1)  
+
+---
+## API
+### Stack
+Stack() - Creates an empty stack.  
+Peek() - Looks at the top element.  
+Push() - Inserts an element on the top of the stack.  
+Pop() - Removes the element on top of the stack.
+### Queue
+Queue() - Creates an empty queue.  
+Peek() - Looks at the top element.  
+Enqueue() - Inserts an element in the back of the queue.  
+Dequeue() - Removes the element in the front of queue.  
+
+---
+### Node
+
+Node(T data, Node next) - Constructs a node and sets its instance vars.
+
+---
+
 # [Linked List](https://github.com/kdcouture/data-structures-and-algorithms/tree/linked_list/Data-Structures/LinkedList/src/main/java/LinkedList)
 <!-- Short summary or background information -->
-
 ## Challenge
 <!-- Description of the challenge -->
 Create an implementation of the Linked List data structure.
