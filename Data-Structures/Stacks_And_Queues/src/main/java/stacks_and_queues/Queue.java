@@ -1,14 +1,16 @@
 package stacks_and_queues;
 
 public class Queue<T> {
+    // Instance Vars
     public Node front;
     public Node back;
-
+    // Constructor
     public Queue() {
         this.front = null;
         this.back = null;
     }
 
+    // Methods
     public T peek() {
         return (T)this.front.data;
     }

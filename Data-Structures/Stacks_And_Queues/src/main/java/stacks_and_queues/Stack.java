@@ -4,12 +4,15 @@
 package stacks_and_queues;
 
 public class Stack<T> {
+    // Instance Var
     protected Node top;
 
+    // Constructor
     public Stack() {
         this.top = null;
     }
 
+    // Methods
     public T peek(){
         if(this.top != null) {
             return (T)this.top.data;

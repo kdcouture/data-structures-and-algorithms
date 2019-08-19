@@ -1,6 +1,7 @@
 package stacks_and_queues;
 
 public class Node<T> {
+    // Instance Vars
     protected T data;
     protected Node next;
 
