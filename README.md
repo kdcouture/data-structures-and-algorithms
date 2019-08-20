@@ -5,19 +5,29 @@
 Create an implementation of a Stack and a Queue using a linked list like structure.
 ## Approach & Efficiency
 Method    Time    Space
+### PusedoQueue
+Enqueue(T data)    O(1)    O(1)  
+Dequeue()    O(n)    (1)  
+Peek()    O(n)    (1)  
+
+---
 ### Stack
 Peek()    O(1)    O(1)  
-Push()    O(1)    O(1)  
+Push(T data)    O(1)    O(1)  
 Pop()     O(1)    O(1)  
 
 ---
 ### Queue
 Peek()    O(1)    O(1)  
-Enqueue() O(1)    O(1)  
+Enqueue(T data) O(1)    O(1)  
 Dequeue() O(1)    O(1)  
 
 ---
 ## API
+### PusedoQueue
+Enqueue(T data) - Places an element into the pusedoqueue.
+Dequeue() - Removes an element from the psuedoqueue.
+Peek() - looks at the top element of the psuedoqueue.
 ### Stack
 Stack() - Creates an empty stack.  
 Peek() - Looks at the top element.  
@@ -33,6 +43,10 @@ Dequeue() - Removes the element in the front of queue.
 ### Node
 
 Node(T data, Node next) - Constructs a node and sets its instance vars.
+
+---
+### Whiteboards
+![wbimg](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/psuedoQueueWBimg.jpg)
 
 ---
 
