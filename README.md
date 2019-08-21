@@ -5,6 +5,11 @@
 Create an implementation of a Stack and a Queue using a linked list like structure.
 ## Approach & Efficiency
 Method    Time    Space
+### AnimalShelter
+Enqueue(Animal data)    O(1)    O(1)
+Dequeue()    O(1)    O(1)
+Dequeue(String Pref)    O(n)    O(1)
+
 ### PusedoQueue
 Enqueue(T data)    O(1)    O(1)  
 Dequeue()    O(n)    (1)  
@@ -24,6 +29,10 @@ Dequeue() O(1)    O(1)
 
 ---
 ## API
+### AnimalShelter
+Enqueue(Animal data) - Places an animal at the fornt of the queue.  
+Dequeue() - Removes the longest existing aninal from the shelter.  
+Dequeue(String Pref) - Removes the longest existing aninal of the prefered type.  
 ### PusedoQueue
 Enqueue(T data) - Places an element into the pusedoqueue.
 Dequeue() - Removes an element from the psuedoqueue.
@@ -38,6 +47,11 @@ Queue() - Creates an empty queue.
 Peek() - Looks at the top element.  
 Enqueue(T data) - Inserts an element in the back of the queue.  
 Dequeue() - Removes the element in the front of queue.  
+
+---
+### Animal, Dog, Cat
+
+These classes are holders for the name and type of animal in the shelter.
 
 ---
 ### Node
