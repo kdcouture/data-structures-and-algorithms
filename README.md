@@ -60,6 +60,7 @@ Node(T data, Node next) - Constructs a node and sets its instance vars.
 
 ---
 ### Whiteboards
+![wbimg](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/CC11.jpg)  
 ![wbimg](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/psuedoQueueWBimg.jpg)
 
 ---
