@@ -40,7 +40,7 @@ public class AnimalShelter extends Queue<Animal> {
                 cur = cur.next;
             }
             if(cur == null)
-                throw new NullPointerException("There are no animals of type");
+                throw new NullPointerException("There are no animals of type " + type);
             pre.next = cur.next;
             return (Animal) cur.data;
         }

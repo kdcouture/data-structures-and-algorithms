@@ -75,7 +75,6 @@ public class AnimalShelterTest {
     @Test (expected = NullPointerException.class) public void testDequeuePrefOnNoCats() {
         // Will throw exception, passes as we expect this.
         testShelter.enqueue(testDog);
-        testShelter.enqueue(testDog);
         testShelter.dequeue("Cat");
     }
 }

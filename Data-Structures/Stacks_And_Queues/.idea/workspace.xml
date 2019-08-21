@@ -62,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AnimalShelterTest.testDequeuePrefOnNoCats">
+  <component name="RunManager" selected="Gradle.AnimalShelterTest">
     <configuration name="AnimalShelterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -184,10 +184,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AnimalShelterTest" />
         <item itemvalue="Gradle.AnimalShelterTest.testDequeuePrefOnNoCats" />
         <item itemvalue="Gradle.AnimalShelterTest.testDequeuePrefOnEmpty" />
         <item itemvalue="Gradle.AnimalShelterTest.testDequeueSinglePref" />
-        <item itemvalue="Gradle.AnimalShelterTest" />
         <item itemvalue="Gradle.AnimalShelterTest.testEnqueue" />
       </list>
     </recent_temporary>
