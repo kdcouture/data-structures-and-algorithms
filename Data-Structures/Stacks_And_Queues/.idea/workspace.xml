@@ -60,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AnimalShelterTest">
+  <component name="RunManager" selected="Gradle.MultiBracketValidationTest">
     <configuration name="AnimalShelterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -121,12 +121,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AnimalShelterTest.testDequeueSinglePref" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MultiBracketValidationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;stacks_and_queues.AnimalShelterTest.testDequeueSinglePref&quot; --stacktrace" />
+        <option name="scriptParameters" value="--tests &quot;stacks_and_queues.MultiBracketValidationTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -141,12 +141,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AnimalShelterTest.testEnqueue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MultiBracketValidationTest.testSimpleSafe" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;stacks_and_queues.AnimalShelterTest.testEnqueue&quot;" />
+        <option name="scriptParameters" value="--tests &quot;stacks_and_queues.MultiBracketValidationTest.testSimpleSafe&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -182,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MultiBracketValidationTest" />
+        <item itemvalue="Gradle.MultiBracketValidationTest.testSimpleSafe" />
         <item itemvalue="Gradle.AnimalShelterTest" />
         <item itemvalue="Gradle.AnimalShelterTest.testDequeuePrefOnNoCats" />
         <item itemvalue="Gradle.AnimalShelterTest.testDequeuePrefOnEmpty" />
-        <item itemvalue="Gradle.AnimalShelterTest.testDequeueSinglePref" />
-        <item itemvalue="Gradle.AnimalShelterTest.testEnqueue" />
       </list>
     </recent_temporary>
   </component>
