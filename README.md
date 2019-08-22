@@ -5,11 +5,16 @@
 Create an implementation of a Stack and a Queue using a linked list like structure.
 ## Approach & Efficiency
 Method    Time    Space
-### AnimalShelter
-Enqueue(Animal data)    O(1)    O(1)
-Dequeue()    O(1)    O(1)
-Dequeue(String Pref)    O(n)    O(1)
+### BracketValidation
+Validate(String input)    O(n)    (n)  
 
+---
+### AnimalShelter
+Enqueue(Animal data)    O(1)    O(1)  
+Dequeue()    O(1)    O(1)  
+Dequeue(String Pref)    O(n)    O(1)  
+
+---
 ### PusedoQueue
 Enqueue(T data)    O(1)    O(1)  
 Dequeue()    O(n)    (1)  
@@ -29,6 +34,8 @@ Dequeue() O(1)    O(1)
 
 ---
 ## API
+### BracketValidation
+Validate(String input) - This method validates the given string has balanced and matching braces. ("(,[,{")  
 ### AnimalShelter
 Enqueue(Animal data) - Places an animal at the fornt of the queue.  
 Dequeue() - Removes the longest existing aninal from the shelter.  
