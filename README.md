@@ -6,20 +6,25 @@
 Create an implementaion of tree structures.
 ## Approach & Efficiency
 Method    Time    Space
-### Binary Search Tree
+### Binary Tree
 add(T data)    O(n)    O(1)  
-contains(T data)    O(n)    O(1)  
 preOrder()    O(n)    O(n)  
 inOrder()    O(n)    O(n)  
 postOrder()    O(n)    O(n)  
+### Binary Search Tree
+add(T data)    O(n)    O(1)  
+contains(T data)    O(n)    O(1)  
 
 ---
 ## API
-add(T data) - This method adds a node to the BST.  
-contains(T data) - Will return a boolean if the data exists or does not.  
+### Binary Tree
+add(T data) - This method adds a node to the Binary Tree.  
 preOrder() - Returns an arraylist of the tree's data.  
 inOrder() - Returns an arraylist of the tree's data.  
 postOrder() - Returns an arraylist of the tree's data.  
+### Binary Search Tree
+add(T data) - This method adds a node to the BST.  
+contains(T data) - Will return a boolean if the data exists or does not.  
 
 ---
 
