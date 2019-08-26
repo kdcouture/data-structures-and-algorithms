@@ -1,5 +1,28 @@
 # data-structures-and-algorithms
 # 401 Data Structures
+
+# [Tree]()
+## Challenge
+Create an implementaion of tree structures.
+## Approach & Efficiency
+Method    Time    Space
+### Binary Search Tree
+add(T data)    O(n)    O(1)  
+contains(T data)    O(n)    O(1)  
+preOrder()    O(n)    O(n)  
+inOrder()    O(n)    O(n)  
+postOrder()    O(n)    O(n)  
+
+---
+## API
+add(T data) - This method adds a node to the BST.  
+contains(T data) - Will return a boolean if the data exists or does not.  
+preOrder() - Returns an arraylist of the tree's data.  
+inOrder() - Returns an arraylist of the tree's data.  
+postOrder() - Returns an arraylist of the tree's data.  
+
+---
+
 # [Stacks and Queues](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Stacks_And_Queues/src/main/java/stacks_and_queues)
 ## Challenge
 Create an implementation of a Stack and a Queue using a linked list like structure.
