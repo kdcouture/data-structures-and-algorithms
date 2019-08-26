@@ -5,56 +5,9 @@ package tree;
 
 import java.util.ArrayList;
 
-public class BST<T> {
-    TreeNode root;
-
+public class BST<T> extends BinaryTree<T> {
     public BST() {
-        this.root = null;
-    }
-
-    // Wraps Recursive printouts.
-    public ArrayList<T> preOrder(){
-        ArrayList<T> build = new ArrayList<>();
-        buildPreOrder(this.root, build);
-        return build;
-    }
-
-    public void buildPreOrder(TreeNode node, ArrayList build) {
-        if(node != null) {
-            build.add(node.data);
-            buildPreOrder(node.left, build);
-            buildPreOrder(node.right, build);
-        }
-    }
-
-    // Wraps Recursive printouts.
-    public ArrayList<T> inOrder(){
-        ArrayList<T> build = new ArrayList<>();
-        buildInOrder(this.root, build);
-        return build;
-    }
-
-    public void buildInOrder(TreeNode node, ArrayList build) {
-        if(node != null) {
-            buildInOrder(node.left, build);
-            build.add(node.data);
-            buildInOrder(node.right, build);
-        }
-    }
-
-    // Wraps Recursive printouts.
-    public ArrayList<T> postOrder(){
-        ArrayList<T> build = new ArrayList<>();
-        buildPostOrder(this.root, build);
-        return build;
-    }
-
-    public void buildPostOrder(TreeNode node, ArrayList build) {
-        if(node != null) {
-            buildPostOrder(node.left, build);
-            buildPostOrder(node.right, build);
-            build.add(node.data);
-        }
+        super();
     }
 
     public boolean contains(T data) {
@@ -80,7 +33,7 @@ public class BST<T> {
         return isFound;
     }
 
-    public void add(T data) {
+    @Override public void add(T data) {
         TreeNode newTreeNode = new TreeNode(data);
         if(this.root == null) {
             this.root = newTreeNode;
@@ -112,22 +65,3 @@ public class BST<T> {
     }
 }
 
-class TreeNode<T> {
-    TreeNode left;
-    TreeNode right;
-    T data;
-
-    public TreeNode(T data) {
-        this.data = data;
-        this.left = null;
-        this. right = null;
-    }
-
-    public int compare(TreeNode toCheck) {
-        return this.toString().compareTo(toCheck.toString());
-    }
-
-    public String toString() {
-        return this.data.toString();
-    }
-}
