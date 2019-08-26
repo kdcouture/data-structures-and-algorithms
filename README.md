@@ -1,7 +1,7 @@
 # data-structures-and-algorithms
 # 401 Data Structures
 
-# [Tree]()
+# [Tree](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Tree/src/main/java/tree)
 ## Challenge
 Create an implementaion of tree structures.
 ## Approach & Efficiency
