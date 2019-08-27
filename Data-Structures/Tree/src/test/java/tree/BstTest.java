@@ -70,4 +70,12 @@ public class BstTest {
         assertTrue(testTree.contains(1));
     }
 
+    @Test public void testStringBST() {
+        BinaryTree<String> testTreeS = new BinaryTree<>();
+        testTreeS.add("b");
+        testTreeS.add("a");
+        testTreeS.add("c");
+        assertEquals("[b, a, c]", testTreeS.preOrder().toString());
+    }
+
 }

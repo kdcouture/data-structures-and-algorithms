@@ -90,4 +90,8 @@ public class BinaryTree<T> {
             }
         }
     }
+
+    public TreeNode getRoot() {
+        return this.root;
+    }
 }
