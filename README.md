@@ -6,6 +6,8 @@
 Create an implementaion of tree structures.
 ## Approach & Efficiency
 Method    Time    Space
+### Fizzbuzz
+fizzbuzz(Tree tree)    O(n)    O(log n)
 ### Binary Tree
 add(T data)    O(n)    O(1)  
 preOrder()    O(n)    O(n)  
@@ -17,6 +19,8 @@ contains(T data)    O(n)    O(1)
 
 ---
 ## API
+### FizzBuzz
+fizzbuzz(Tree tree) - This method will apply fizzbuzz to the given tree.  
 ### Binary Tree
 add(T data) - This method adds a node to the Binary Tree.  
 preOrder() - Returns an arraylist of the tree's data.  
