@@ -18,4 +18,20 @@ public class TreeNode<T> {
     public String toString() {
         return this.data.toString();
     }
+
+    public T getData() {
+        return this.data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public TreeNode getLeft() {
+        return this.left;
+    }
+
+    public TreeNode getRight() {
+        return this.right;
+    }
 }
