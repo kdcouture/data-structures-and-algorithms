@@ -33,4 +33,12 @@ public class fizzBuzzTest {
         FizBuzTree.FizBuz(testTree);
         assertEquals("[1, 2, 4, Buzz, Fizz, FizzBuzz, FizzBuzz]", testTree.preOrder().toString());
     }
+
+    @Test public void testFizBuzNoChange() {
+        testTree.add(1);
+        testTree.add(2);
+        testTree.add(4);
+        FizBuzTree.FizBuz(testTree);
+        assertEquals("[1, 2, 4]", testTree.preOrder().toString());
+    }
 }
