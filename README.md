@@ -31,6 +31,10 @@ add(T data) - This method adds a node to the BST.
 contains(T data) - Will return a boolean if the data exists or does not.  
 
 ---
+## Whiteboards
+![](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/fizbuztree.jpg)
+
+---
 
 # [Stacks and Queues](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Stacks_And_Queues/src/main/java/stacks_and_queues)
 ## Challenge
