@@ -17,6 +17,17 @@ public class treeTest {
         assertNull(testTree.root);
     }
 
+    @Test public void testBreadthFirst() {
+        testTree.add(1);
+        testTree.add(2);
+        testTree.add(3);
+        testTree.add(4);
+        testTree.add(5);
+        testTree.add(6);
+        testTree.add(7);
+        assertEquals("1 2 3 4 5 6 7", testTree.breadthFirst());
+    }
+
     @Test public void testAddSingle() {
         testTree.add(1);
         assertEquals("1",1,testTree.root.data);

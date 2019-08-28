@@ -11,6 +11,33 @@ public class BinaryTree<T> {
         this.root = null;
     }
 
+    public String breadthFirst() {
+        String retStr = "";
+        if(this.root != null) {
+            Queue<TreeNode> levelQueue = new LinkedList<>();
+            levelQueue.add(this.root);
+            TreeNode cur;
+            // Look for empty spot.
+            while(!levelQueue.isEmpty()) {
+                cur = levelQueue.poll();
+                if (cur == null) {
+                    break;
+                }
+                else {
+//                    System.out.println(cur.data);
+                    retStr += cur.data.toString() + " ";
+                    if(cur.left != null) {
+                        levelQueue.add(cur.left);
+                    }
+                    if(cur.right != null) {
+                        levelQueue.add(cur.right);
+                    }
+                }
+            }
+        }
+        return retStr.trim();
+    }
+
     // Wraps Recursive printouts.
     public ArrayList<T> preOrder(){
         ArrayList<T> build = new ArrayList<>();
