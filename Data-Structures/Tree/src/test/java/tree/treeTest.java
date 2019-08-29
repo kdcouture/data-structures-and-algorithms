@@ -17,6 +17,21 @@ public class treeTest {
         assertNull(testTree.root);
     }
 
+    @Test public void testFindMax() {
+        testTree.add(1);
+        testTree.add(2);
+        testTree.add(3);
+        assertEquals("Max is 3", 3, testTree.findMax());
+        testTree.add(4);
+        testTree.add(5);
+        testTree.add(9);
+        assertEquals("Max is 9", 9, testTree.findMax());
+        testTree.add(-1);
+        testTree.add(-2);
+        assertEquals("Max is still 9", 9, testTree.findMax());
+
+    }
+
     @Test public void testBreadthFirst() {
         testTree.add(1);
         testTree.add(2);

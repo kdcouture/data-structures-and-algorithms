@@ -11,6 +11,35 @@ public class BinaryTree<T> {
         this.root = null;
     }
 
+    public Object findMax() {
+        TreeNode max = null;
+        if(this.root != null) {
+            Queue<TreeNode> levelQueue = new LinkedList<>();
+            levelQueue.add(this.root);
+            TreeNode cur;
+            max = this.root;
+            // Look for empty queue to stop.
+            while(!levelQueue.isEmpty()) {
+                cur = levelQueue.poll();
+                if (cur == null) {
+                    break;
+                }
+                else {
+                    if(cur.compare(max) > 0) {
+                        max = cur;
+                    }
+                    if(cur.left != null) {
+                        levelQueue.add(cur.left);
+                    }
+                    if(cur.right != null) {
+                        levelQueue.add(cur.right);
+                    }
+                }
+            }
+        }
+        return max.getData();
+    }
+
     public String breadthFirst() {
         String retStr = "";
         if(this.root != null) {
