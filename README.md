@@ -9,6 +9,7 @@ Method    Time    Space
 ### Fizzbuzz
 fizzbuzz(Tree tree)    O(n)    O(log n)
 ### Binary Tree
+findMax()    O(n)    O(log n)  
 breadthFirst()    O(n)    O(log n)  
 add(T data)    O(n)    O(1)  
 preOrder()    O(n)    O(n)  
@@ -23,6 +24,7 @@ contains(T data)    O(n)    O(1)
 ### FizzBuzz
 fizzbuzz(Tree tree) - This method will apply fizzbuzz to the given tree.  
 ### Binary Tree
+findMax() - This method will return the Object with the highest value.  
 breadthFirst() - This method will return a string of the breadth first tree traversal.   
 add(T data) - This method adds a node to the Binary Tree.  
 preOrder() - Returns an arraylist of the tree's data.  
@@ -34,6 +36,7 @@ contains(T data) - Will return a boolean if the data exists or does not.
 
 ---
 ## Whiteboards
+![](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/401CC18.jpg)
 ![](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/CC17.jpg)
 ![](https://github.com/kdcouture/data-structures-and-algorithms/blob/master/code401challenges/assets/fizbuztree.jpg)
 
