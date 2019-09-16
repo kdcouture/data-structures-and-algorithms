@@ -3,6 +3,8 @@
  */
 package hashTable;
 
+import org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
+
 public class HashTable {
 
     public HashNode[] map;
@@ -30,10 +32,16 @@ public class HashTable {
         int hashKey = hash(key);
 
 //        System.out.println("Key -> hashed : " + key + " " + hashKey);
-        if(this.contains(key)) {
-            System.out.println("No duplicate keys!");
-            return;
+        try{
+            if(this.contains(key)) {
+                System.out.println("No duplicate keys!");
+                throw new IllegalArgumentException();
+            }
         }
+        catch (Exception e) {
+            System.err.println("No duplicate keys!\n" + e);
+        }
+
         // If map[hashvalue] is a thing ... do the linked list thing
         // Otherwise, just add the node.
         if( this.map[hashKey] == null ) {
