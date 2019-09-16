@@ -29,16 +29,10 @@ public class HashTable {
         // set a var (int) of the hash(key)
         int hashKey = hash(key);
 
-//        System.out.println("Key -> hashed : " + key + " " + hashKey);
-//        try{
             if(this.contains(key)) {
                 System.out.println("No duplicate keys!");
                 throw new IllegalArgumentException();
             }
-//        }
-//        catch (Exception e) {
-//            System.err.println("No duplicate keys!\n" + e);
-//        }
 
         // If map[hashvalue] is a thing ... do the linked list thing
         // Otherwise, just add the node.
@@ -76,7 +70,7 @@ public class HashTable {
         if(this.map[hashKey] != null ) {
             // Iterate through any chained items.
             HashNode temp = this.map[hashKey];
-            while(temp != null && Integer.parseInt(temp.key) != hashKey) {
+            while(temp != null && temp.key != key) {
                 temp = temp.next;
             }
             return (temp == null ? false : true);
