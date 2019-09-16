@@ -51,7 +51,7 @@ public class LibraryTest {
         assertTrue(testSmallMap.contains("2"));
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void testMultiKeyAdd() {
         testHashMap.add("0", "0");
         testHashMap.add("0", "0");
