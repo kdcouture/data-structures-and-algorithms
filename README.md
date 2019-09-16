@@ -4,9 +4,17 @@
 # [HashTable](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/HashTable)
 ## Challenge
 Create an implementation of the hashtable data structure.
+## API
+### RepeatedWord
+repeatedWordCheck() - This method takes in an input string and will return the first word that is repeated regardless of capilization or punctuation. 
+### HashTable
+hash() - This method is the hash function for the table.  
+add() - This method will add a new Key/Value pair into the hash table.  
+contains() - This method will return true if the input key exists in the table, false otherwise.  
+get() - This method will return the value stored at the input key if it exists.
 ## Approach & Efficiency
 Method    Time    Space
-## RepeatedWord
+### RepeatedWord
 ###### n = # of words sperated by spaces in the input string
 repeatedWordCheck()    O(n)    O(n)
 ## HashTable
@@ -14,16 +22,8 @@ repeatedWordCheck()    O(n)    O(n)
 hash()    O(1)    O(1)  
 add()    O(n)    O(1)  
 contains()    O(n)    O(1)  
-get()    O(n)    O(1)  
-## API
-## RepeatedWord
-repeatedWordCheck() - This method takes in an input string and will return the first word that is repeated regardless of capilization or punctuation. 
-## HashTable
-hash() - This method is the hash function for the table.  
-add() - This method will add a new Key/Value pair into the hash table.  
-contains() - This method will return true if the input key exists in the table, false otherwise.  
-get() - This method will return the value stored at the input key if it exists.  
-## HashNode
+get()    O(n)    O(1)    
+### HashNode
 getters and setters that run in O(1) time/space.
 
 # [Tree](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Tree/src/main/java/tree)
