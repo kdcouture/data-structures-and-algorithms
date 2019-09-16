@@ -1,6 +1,27 @@
 # data-structures-and-algorithms
 # 401 Data Structures
 
+# [HashTable](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/HashMap)
+## Challenge
+Create an implementation of the hashtable data structure.
+## Approach & Efficiency
+Method    Time    Space
+## HashTable
+###### n = number of elements chained at a particular hash value.
+hash()    O(1)    O(1)  
+add()    O(n)    O(1)  
+contains()    O(n)    O(1)  
+get()    O(n)    O(1)  
+## API
+
+## HashTable
+hash() - This method is the hash function for the table.  
+add() - This method will add a new Key/Value pair into the hash table.  
+contains() - This method will return true if the input key exists in the table, false otherwise.  
+get() - This method will return the value stored at the input key if it exists.  
+## HashNode
+getters and setters that run in O(1) time/space.
+
 # [Tree](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Tree/src/main/java/tree)
 ## Challenge
 Create an implementaion of tree structures.
