@@ -6,6 +6,9 @@
 Create an implementation of the hashtable data structure.
 ## Approach & Efficiency
 Method    Time    Space
+## RepeatedWord
+###### n = # of words sperated by spaces in the input string
+repeatedWordCheck()    O(n)    O(n)
 ## HashTable
 ###### n = number of elements chained at a particular hash value.
 hash()    O(1)    O(1)  
@@ -13,7 +16,8 @@ add()    O(n)    O(1)
 contains()    O(n)    O(1)  
 get()    O(n)    O(1)  
 ## API
-
+## RepeatedWord
+repeatedWordCheck() - This method takes in an input string and will return the first word that is repeated regardless of capilization or punctuation. 
 ## HashTable
 hash() - This method is the hash function for the table.  
 add() - This method will add a new Key/Value pair into the hash table.  
