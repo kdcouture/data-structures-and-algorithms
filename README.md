@@ -1,7 +1,7 @@
 # data-structures-and-algorithms
 # 401 Data Structures
 
-# [HashTable](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/HashMap)
+# [HashTable](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/HashTable)
 ## Challenge
 Create an implementation of the hashtable data structure.
 ## Approach & Efficiency
