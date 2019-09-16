@@ -11,7 +11,7 @@ public class repeatedWordTest {
     @Test
     public void testRepeatedWordSafe() {
         assertEquals("the", repeatedWord.repeatedWordCheck("The the"), "the");
-        assertEquals("aa", repeatedWord.repeatedWordCheck("A B AA B AA BBAB"), "aa");
+        assertEquals("b", repeatedWord.repeatedWordCheck("A B AA B AA BBAB"), "b");
         assertEquals("No duplicates", repeatedWord.repeatedWordCheck("A B ACA BL ADA CBBAB"), "");
     }
     @Test
