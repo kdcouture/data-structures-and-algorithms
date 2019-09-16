@@ -17,5 +17,6 @@ public class repeatedWordTest {
     @Test
     public void testRepeatedWordEdge() {
         assertEquals("Empty input", repeatedWord.repeatedWordCheck(""), "");
+        assertEquals("the", repeatedWord.repeatedWordCheck("The? the."), "the");
     }
 }
