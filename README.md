@@ -5,6 +5,8 @@
 ## Challenge
 Create an implementation of the hashtable data structure.
 ## API
+### FindDupsInTrees
+findDuplicatesInTrees() - This method takes in two integer binary trees and will return a string containing all values found in both trees. 
 ### RepeatedWord
 repeatedWordCheck() - This method takes in an input string and will return the first word that is repeated regardless of capilization or punctuation. 
 ### HashTable
@@ -14,6 +16,9 @@ contains() - This method will return true if the input key exists in the table, 
 get() - This method will return the value stored at the input key if it exists.
 ## Approach & Efficiency
 Method    Time    Space
+### FindDuplicatesInTrees
+###### n = # of elements in the larger tree.
+findDuplicatesInTrees()    O(n)    O(n)
 ### RepeatedWord
 ###### n = # of words sperated by spaces in the input string
 repeatedWordCheck()    O(n)    O(n)
