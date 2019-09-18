@@ -10,6 +10,7 @@ findDuplicatesInTrees() - This method takes in two integer binary trees and will
 ### RepeatedWord
 repeatedWordCheck() - This method takes in an input string and will return the first word that is repeated regardless of capilization or punctuation. 
 ### HashTable
+left_join() - This method will preform a left join operation on a table compared to the passed in table.  
 hash() - This method is the hash function for the table.  
 add() - This method will add a new Key/Value pair into the hash table.  
 contains() - This method will return true if the input key exists in the table, false otherwise.  
@@ -24,6 +25,7 @@ findDuplicatesInTrees()    O(n)    O(n)
 repeatedWordCheck()    O(n)    O(n)
 ## HashTable
 ###### n = number of elements chained at a particular hash value.
+left_join()    O(n)    O(n) . 
 hash()    O(1)    O(1)  
 add()    O(n)    O(1)  
 contains()    O(n)    O(1)  
