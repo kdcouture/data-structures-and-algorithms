@@ -6,6 +6,9 @@ package hashTable;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
@@ -20,6 +23,29 @@ public class LibraryTest {
             assertNull(testHashMap.map[i]);
         }
     }
+
+    @Test
+    public void testLeftJoin() {
+        HashTable h2 = new HashTable(5);
+        h2.add("0", "0-t2");
+        h2.add("1", "1-t2");
+        h2.add("2", "2-t2");
+        h2.add("3", "3-t2");
+
+        testHashMap.add("0", "0-t1");
+        testHashMap.add("1", "1-t1");
+        testHashMap.add("5", "2-t1");
+        ArrayList<String[]> testStringArrayList = testHashMap.left_join(h2);
+        String result = "";
+        String expected = "[5, 2-t1, null]\n" +
+                "[1, 1-t1, 1-t2]\n" +
+                "[0, 0-t1, 0-t2]\n";
+        for (String[] stringRow : testStringArrayList) {
+            result += Arrays.toString(stringRow) + "\n";
+        }
+        assertEquals("should be the same", result, expected);
+    }
+
     @Test
     public void testAddAndContains() {
         testHashMap.add("0", "testValue");

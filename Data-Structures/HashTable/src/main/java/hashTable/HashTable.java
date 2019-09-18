@@ -3,12 +3,31 @@
  */
 package hashTable;
 
+import java.util.ArrayList;
+
 public class HashTable {
 
     public HashNode[] map;
 
     public HashTable(int size) {
         map = new HashNode[size];
+    }
+
+    public ArrayList<String[]> left_join(HashTable ht) {
+        ArrayList<String[]> toRet = new ArrayList<String[]>();
+        for(int i = 0; i < this.map.length; i++) {
+            String[] rowString = new String[3];
+            if (this.map[i] != null) {
+                rowString[0] = this.map[i].key;
+                rowString[1] = this.map[i].value;
+                rowString[2] = null;
+                if(ht.contains(this.map[i].key)) {
+                    rowString[2] = ht.get(this.map[i].key);
+                }
+                toRet.add(rowString);
+            }
+        }
+        return toRet;
     }
 
     // hash()
