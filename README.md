@@ -1,6 +1,22 @@
 # data-structures-and-algorithms
 # 401 Data Structures
 
+# [Graph](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Graph)
+## Challenge
+Create an implementation of the graph data structure.
+## API
+### Graph
+breadthFirst() - This will display the graphs vertices in an breadth first order.  
+addNode() - Adds a new vertex to the graph.  
+addEdge() - Adds a new edge between two nodes of the graph.  
+getNeighbors() - Returns all the adj vertices to a given vertex.  
+getNodes() - Returns all vertices in the graph.  
+size() - Returns the number of vertices in the graph.
+
+## Approach & Efficiency
+Method    Time    Space  
+breadthFirst()    O(n)    O(n)  
+
 # [HashTable](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/HashTable)
 ## Challenge
 Create an implementation of the hashtable data structure.
