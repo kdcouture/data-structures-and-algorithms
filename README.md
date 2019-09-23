@@ -1,7 +1,7 @@
 # data-structures-and-algorithms
 # 401 Data Structures
 
-# [Graph](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Graph)
+# [Graph](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/Graph/src/main/java/graph)
 ## Challenge
 Create an implementation of the graph data structure.
 ## API
