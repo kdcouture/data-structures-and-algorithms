@@ -58,16 +58,22 @@ public class LibraryTest {
         testGraph.addNode("a");
         testGraph.addNode("b");
         testGraph.addNode("c");
+        testGraph.addNode("d");
 
         testGraph.addEdge("a","b",1);
+        testGraph.addEdge("a","d",1);
         testGraph.addEdge("b","c",1);
         testGraph.addEdge("b","a",1);
         testGraph.addEdge("c","a",1);
         testGraph.addEdge("c","b",1);
+        testGraph.addEdge("c","d",1);
+        // a -> b && a -> d
+        // b -> a && b -> c
+        // c -> a && c -> b && c -> d
 
-        assertEquals("node check", "[a, b, c]", testGraph.getNodes());
-//        assertEquals("a - > b -> c", "[a, b, c]", testGraph.breadthFirst("a").toString());
-        assertEquals("c - > b -> a", "[c, b, a]", testGraph.breadthFirst("c").toString());
+        assertEquals("node check", "[a, b, c, d]", testGraph.getNodes());
+        assertEquals("a - > b -> c", "[a, b, d, c]", testGraph.breadthFirst("a").toString());
+        assertEquals("c - > b -> a", "[c, a, b, d]", testGraph.breadthFirst("c").toString());
     }
 
     @Test

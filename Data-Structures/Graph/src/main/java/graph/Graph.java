@@ -16,7 +16,7 @@ public class Graph {
         // Holds the array list to return.
         ArrayList<String> toRet = new ArrayList<String>();
         // Holds nodes we have visited.
-        Stack<String> toVisit = new Stack<String>();
+        Queue<String> toVisit = new LinkedList<String>();
         // Temp to hold each nodes adj list.
         ArrayList<GraphEdge> adjListTemp;
         // Temp to hold the current key.
@@ -30,7 +30,7 @@ public class Graph {
             toVisit.add(start);
             while(!toVisit.isEmpty()){
                 // Pop element from stack.
-                currentKey = toVisit.pop();
+                currentKey = toVisit.remove();
                 // Duplicate return key check.
                 if(!toRet.contains(currentKey)){
                     // Add current to the return list.
@@ -43,7 +43,7 @@ public class Graph {
                     adjKey = adjListTemp.get(i).getDestKey();
                     // Verify it has not been seen yet.
                     if(!toRet.contains(adjKey)){
-                        toVisit.push(adjKey);
+                        toVisit.add(adjKey);
                     }
                 }
             }
