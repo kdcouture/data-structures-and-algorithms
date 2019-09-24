@@ -12,10 +12,12 @@ addEdge() - Adds a new edge between two nodes of the graph.
 getNeighbors() - Returns all the adj vertices to a given vertex.  
 getNodes() - Returns all vertices in the graph.  
 size() - Returns the number of vertices in the graph.
+GetEdge() - Returns an object containing a boolean and and a integer which will represent if a trip itinerary is possible and its cost.   
 
 ## Approach & Efficiency
 Method    Time    Space  
 breadthFirst()    O(n)    O(n)  
+GetEdge()    O(n)    O(n)
 
 # [HashTable](https://github.com/kdcouture/data-structures-and-algorithms/tree/master/Data-Structures/HashTable)
 ## Challenge
