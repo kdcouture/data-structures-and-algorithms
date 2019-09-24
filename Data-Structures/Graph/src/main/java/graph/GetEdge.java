@@ -6,6 +6,12 @@ public class GetEdge {
     public static Result GetEdge(Graph graph, String[] itinerary) {
         int cost = 0;
         Boolean canDo = true;
+        String nodes = graph.getNodes();
+        for (String dest: itinerary) {
+            if(!nodes.contains(dest)) {
+                return new Result(0, false);
+            }
+        }
         for(int i = 0; i < itinerary.length-1; i++) {
             String currentKey = itinerary[i];
             ArrayList<GraphEdge> tempAdjList = graph.getNeighbors(currentKey);
