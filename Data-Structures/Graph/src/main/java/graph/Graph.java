@@ -12,6 +12,45 @@ public class Graph {
         vertices = new HashMap<String, ArrayList<GraphEdge>>();
     }
 
+    public ArrayList<String> depthFirst(String start) {
+        // Holds the array list to return.
+        ArrayList<String> toRet = new ArrayList<String>();
+        // Holds nodes we have visited.
+        Stack<String> toVisit = new Stack<String>();
+        // Temp to hold each nodes adj list.
+        ArrayList<GraphEdge> adjListTemp;
+        // Temp to hold the current key.
+        String currentKey = "";
+        // temp to hold the current adj key.
+        String adjKey = "";
+
+        // Verify graph contains the vertex.
+        if(this.vertices.containsKey(start)) {
+            // Init loop start.
+            toVisit.add(start);
+            while(!toVisit.isEmpty()){
+                // Pop element from stack.
+                currentKey = toVisit.pop();
+                // Duplicate return key check.
+                if(!toRet.contains(currentKey)){
+                    // Add current to the return list.
+                    toRet.add(currentKey);
+                }
+                // Add current node's adj nodes.
+                adjListTemp = this.vertices.get(currentKey);
+                // Check all adj nodes.
+                for(int i = 0; i < adjListTemp.size(); i++) {
+                    adjKey = adjListTemp.get(i).getDestKey();
+                    // Verify it has not been seen yet.
+                    if(!toRet.contains(adjKey)){
+                        toVisit.push(adjKey);
+                    }
+                }
+            }
+        }
+        return toRet;
+    }
+
     public ArrayList<String> breadthFirst(String start) {
         // Holds the array list to return.
         ArrayList<String> toRet = new ArrayList<String>();
