@@ -6,6 +6,7 @@
 Create an implementation of the graph data structure.
 ## API
 ### Graph
+depthFirst() - This will travers the graph starting at a given node and travel in a depth first order.  
 breadthFirst() - This will display the graphs vertices in an breadth first order.  
 addNode() - Adds a new vertex to the graph.  
 addEdge() - Adds a new edge between two nodes of the graph.  
@@ -16,6 +17,7 @@ GetEdge() - Returns an object containing a boolean and and a integer which will 
 
 ## Approach & Efficiency
 Method    Time    Space  
+depthFirst()    O(n)    O(n)  
 breadthFirst()    O(n)    O(n)  
 GetEdge()    O(n)    O(n)
 
