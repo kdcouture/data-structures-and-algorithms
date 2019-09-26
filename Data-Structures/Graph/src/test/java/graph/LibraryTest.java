@@ -13,6 +13,22 @@ import static org.junit.Assert.*;
 
 public class LibraryTest {
     private Graph testGraph;
+
+    @Test
+    public void testDepthFirst() {
+        testGraph = new Graph();
+        testGraph.addNode("a");
+        testGraph.addNode("b");
+        testGraph.addNode("c");
+        testGraph.addNode("d");
+
+        testGraph.addEdge("a","c",1);
+        testGraph.addEdge("a","b",1);
+        testGraph.addEdge("b","d",1);
+
+        assertEquals("a - > b -> d -> c", "[a, b, d, c]", testGraph.depthFirst("a").toString());
+    }
+
     @Test
     public void testConstruct() {
         testGraph = new Graph();
